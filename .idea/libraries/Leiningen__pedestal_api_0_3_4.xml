@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: pedestal-api:0.3.4">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/pedestal-api/pedestal-api/0.3.4/pedestal-api-0.3.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
