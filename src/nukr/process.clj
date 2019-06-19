@@ -7,5 +7,6 @@
     ([data name] (recomendation-friends data name {}))
     ([data name friends-recomendation]
         (let [friends (get-friends data name)
-              recomendation (map #(get-friends data %) friends)]
-              (remove nil? recomendation))))
+              recomendation (map #(get-friends data %) friends)
+              recomendation-finish (reduce into (remove nil? recomendation))]
+              (disj (s/difference (set recomendation-finish) (set friends)) name))))
