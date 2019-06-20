@@ -37,3 +37,21 @@
    :name s/Str
    :short_name s/Str
    :enable_friends_recommendation s/Bool})
+
+(s/defschema FriendResp
+  {:id s/Int
+   :name s/Str
+   :can-recommendation s/Bool})
+
+(s/defschema FriendShipResp
+  {:user-id s/Int
+   :name s/Str
+   :friends [FriendResp]})
+
+(s/defschema Friend
+  {:friend {:id s/Int}})
+
+(s/defschema RecommendationResp
+  {:user-id s/Int
+   :name s/Str
+   :recommendations [FriendResp]})

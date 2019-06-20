@@ -27,5 +27,7 @@
   :profiles {:dev {:aliases {"run-dev" ["trampoline" "run" "-m" "nukr.server/run-dev"]}
                    :dependencies [[io.pedestal/pedestal.service-tools "0.5.5"]]}
              :uberjar {:aot [nukr.server]}}
+  :plugins [[lein-cloverage "1.1.1"]
+  										[lein-cljfmt "0.6.4"]]
   :main ^{:skip-aot true} nukr.server)
 
