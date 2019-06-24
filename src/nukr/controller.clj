@@ -14,7 +14,6 @@
         find (get friends id)
         recommendation (map #(get-friends data %) find)
         clear-recommendations (reduce into (remove nil? recommendation))]
-    (println friends)
     (-> (vals clear-recommendations)
         (flatten)
         (set)
