@@ -3,23 +3,6 @@
             [nukr.logic :as logic]
             [clojure.set :as set]))
 
-(defn ^:private get-friends [data id]
-  (get data id))
-
-(defn can-recomendation-friend? [user]
-  (get user :enable_friends_recommendation))
-
-(defn ^:private recommendation [data id]
-  (let [friends (get-friends data id)
-        find (get friends id)
-        recommendation (map #(get-friends data %) find)
-        clear-recommendations (reduce into (remove nil? recommendation))]
-    (-> (vals clear-recommendations)
-        (flatten)
-        (set)
-        (set/difference (set (get friends id)))
-        (disj id))))
-
 (defn create-user [user]
   (profile/create-user user))
 
@@ -49,6 +32,6 @@
   (profile/remove-friend user-id friend-id))
 
 (defn recommendation-friends [user-id]
-  (let [recommendations (recommendation @profile/friendships user-id)]
+  (let [recommendations (logic/recommendation @profile/friendships user-id)]
     (logic/format-recommendations
      (get-user-by-id user-id) (map #(get-user-by-id %) recommendations))))
