@@ -14,19 +14,21 @@
    :name (:name user)
    :recommendations (map format-friendship friends)})
 
-(defn ^:private get-friends [data id]
-  (get data id))
-
 (defn can-recomendation-friend? [user]
   (get user :enable_friends_recommendation))
 
+(defn get-friends [data id]
+  (let [user (get data id)]
+    (get user id)))
+
+(defn recommendations [data recommendation ids remove-id]
+  (if (not-empty ids)
+    (let [friends (get-friends data (first ids))
+          find (remove #{remove-id} (distinct (concat (rest ids) recommendation)))]
+      (recur data (concat friends recommendation) find (concat (first ids) remove-id)))
+    recommendation))
+
 (defn recommendation [data id]
-  (let [friends (get-friends data id)
-        find (get friends id)
-        recommendation (map #(get-friends data %) find)
-        clear-recommendations (reduce into (remove nil? recommendation))]
-    (-> (vals clear-recommendations)
-        (flatten)
-        (set)
-        (set/difference (set (get friends id)))
-        (disj id))))
+  (recommendations data nil (get-friends data id) nil))
+
+(def data {1 {1 '(2), :id 1}, 2 {2 '(1 3), :id 2}, 3 {3 '(1 4 5), :id 3}})
