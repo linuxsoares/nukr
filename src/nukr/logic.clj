@@ -21,14 +21,27 @@
   (let [user (get data id)]
     (get user id)))
 
-(defn recommendations [data recommendation ids]
-  (if (not-empty ids)
-    (let [friends (get-friends data (first ids))]
-      (recur data (distinct (concat friends recommendation ids)) (rest ids)))
-    recommendation))
+(defn remove-user-recommendation-disabled [users]
+  (let [enabled-users (filter #(can-recomendation-friend? %) users)]
+    enabled-users))
 
-(defn recommendation [data id]
-  (let [recommendation (recommendations data nil (get-friends data id))]
-    (remove #{id} (remove #{(get-friends data id)} recommendation))))
+(defn clean-recommendations [data recommendations user-id]
+  (let [friends (get-friends data user-id)]
+    (set (remove (set friends) recommendations))))
 
-(def data {1 {1 '(2), :id 1}, 2 {2 '(1 3), :id 2}, 3 {3 '(1 4 5), :id 3}})
+(defn ^:private find-recommendations [data user-id users users-recommendations researched]
+  (let [recommendation (remove nil? (flatten (map #(get-friends data %) users)))
+        find-more-users (remove #{user-id} recommendation)
+        find-users (remove (set researched) find-more-users)
+        user-recommendations (concat users-recommendations find-more-users)
+        user-researched (concat users researched)]
+    (if (not-empty find-more-users)
+      (recur data user-id find-users user-recommendations user-researched)
+      (clean-recommendations data users-recommendations user-id))))
+
+(defn recommendations
+  ([data user-id]
+   (let [friends (get-friends data user-id)]
+     (if (not-empty friends)
+       (find-recommendations data user-id friends nil nil)))))
+

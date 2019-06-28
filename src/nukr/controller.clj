@@ -32,6 +32,9 @@
   (profile/remove-friend user-id friend-id))
 
 (defn recommendation-friends [user-id]
-  (let [recommendations (logic/recommendation @profile/friendships user-id)]
+  (let [recommendations (logic/recommendations @profile/friendships user-id)
+        users (map #(get-user-by-id %) recommendations)
+        enabled-users-recommendations (logic/remove-user-recommendation-disabled users)]
+    (println enabled-users-recommendations)
     (logic/format-recommendations
-     (get-user-by-id user-id) (map #(get-user-by-id %) recommendations))))
+     (get-user-by-id user-id) enabled-users-recommendations)))
