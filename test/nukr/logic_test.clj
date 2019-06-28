@@ -37,5 +37,5 @@
 
 (deftest test-should-recommendation-friends-tree
   (let [data {1 {1 '(2), :id 1}, 2 {2 '(1 3), :id 2}, 3 {3 '(1 2 4 5), :id 3}}
-  friends-recommendation (logic/recommendations data 1)]
+        friends-recommendation (logic/recommendations data 1)]
     (is (= #{3 4 5} friends-recommendation))))
