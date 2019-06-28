@@ -44,4 +44,3 @@
    (let [friends (get-friends data user-id)]
      (if (not-empty friends)
        (find-recommendations data user-id friends nil nil)))))
-
