@@ -2,15 +2,32 @@
 
 FIXME
 
+# Makefile
+## All commands Makefile:
+```
+Commmands:           Descriptions:
+
+build-image          Build a Docker image
+fix-format-code      Formats the code for the entire project
+help                 This help
+install-dependencies Install dependencies
+lint                 Check format code of the all project
+run                  Run server
+run-docker-image     Run your Docker image
+run-repl             Run clojure repl
+tests                Run tests
+uberjar              Build an uberjar of your service
+```
+
+
 ## Getting Started
 
-1. Start the application: `lein run`
-2. Go to [localhost:8080](http://localhost:8080/) to see: `Hello World!`
-3. Read your app's source code at src/nukr/service.clj. Explore the docs of functions
-   that define routes and responses.
-4. Run your app's tests with `lein test`. Read the tests at test/nukr/service_test.clj.
-5. Learn more! See the [Links section below](#links).
+1. Start the application: `lein run` or `make run`
+2. Go to [localhost:8080](http://localhost:8080/) to see: `Swagger Documentation`
 
+## Run Tests
+
+1. Run your app's tests with `lein test` or `make tests`.
 
 ## Configuration
 
@@ -19,11 +36,6 @@ To learn more about configuring Logback, read its [documentation](http://logback
 
 
 ## Developing your service
-
-1. Start a new REPL: `lein repl`
-2. Start your service in dev-mode: `(def dev-serv (run-dev))`
-3. Connect your editor to the running REPL session.
-   Re-evaluated code will be seen immediately in the service.
 
 ### [Docker](https://www.docker.com/) container support
 

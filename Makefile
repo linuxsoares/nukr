@@ -22,3 +22,12 @@ run-repl: ## Run clojure repl
 	@lein repl
 
 all-check: lint tests
+
+uberjar: ## Build an uberjar of your service
+	@lein uberjar
+
+build-image: ## Build a Docker image
+	@lein sudo docker build -t nukr .
+
+run-docker-image: ## Run your Docker image
+    docker run -p 8080:8080 nukr
