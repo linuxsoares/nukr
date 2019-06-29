@@ -12,7 +12,7 @@
    :all-friends
    {:summary "Get all friendships for user id"
     :parameters {:path-params {:id s/Int}}
-    :responses {201 {:body schema/FriendShipResp}}}
+    :responses {200 {:body schema/FriendShipResp}}}
    (fn [request]
      (let [id (:path-params request)]
        {:status 200
