@@ -9,8 +9,8 @@
              :state s/Str
              :street s/Str
              :zipcode s/Str}
-   ;:birthday s/Inst
-   :email s/Str
+   :birthday #"\d{4}-\d{2}-\d{2}"
+   :email #"^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$"
    :first_name s/Str
    :last_name s/Str
    :gender s/Str
@@ -28,8 +28,8 @@
              :state s/Str
              :street s/Str
              :zipcode s/Str}
-   ;:birthday s/Inst
-   :email s/Str
+   :birthday #"\d{4}-\d{2}-\d{2}"
+   :email #"^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$"
    :first_name s/Str
    :last_name s/Str
    :gender s/Str

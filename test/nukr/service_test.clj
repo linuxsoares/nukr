@@ -25,7 +25,8 @@
                                   :state "string",
                                   :street "string",
                                   :zipcode "string"},
-                        :email "string",
+                        :email "linux.soares@gmail.com",
+                        :birthday "2019-01-01"
                         :first_name "string",
                         :name "joao",
                         :short_name "string",
@@ -70,16 +71,16 @@
          (count response) 0))))
 
 (deftest test-api-create-user
-  (let [response (post-user (assoc-in payload [:email] "joao-pedro@gmail.com"))]
+  (let [response (post-user payload)]
     (is (=
          201 (:status response)))
     (is (=
          1 (get (json/read-str (:body response)) "id")))))
 
-(deftest test-api-create-user
-  (c/create-user (assoc-in payload [:email] "joao-pedro@gmail.com"))
-  (let [response (post-user (assoc-in payload [:email] "joao-pedro@gmail.com"))
-        expected {"message" "User with email: joao-pedro@gmail.com exists!"}]
+(deftest test-api-should-create-user-error-user-exists
+  (c/create-user (assoc-in payload [:email] "joao@gmail.com"))
+  (let [response (post-user (assoc-in payload [:email] "joao@gmail.com"))
+        expected {"message" "User with email: joao@gmail.com exists!"}]
     (is (=
          409 (:status response)))
     (is (=

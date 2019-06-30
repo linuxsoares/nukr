@@ -18,7 +18,8 @@
                                :state "string",
                                :street "string",
                                :zipcode "string"},
-                     :email "string",
+                     :email "string@string.com",
+                     :birthday "2019-01-01"
                      :first_name "string",
                      :name "joao",
                      :short_name "string",
