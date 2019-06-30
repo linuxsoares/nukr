@@ -1,7 +1,6 @@
 (ns nukr.controller
   (:require [nukr.db.profile :as profile]
-            [nukr.logic :as logic]
-            [clojure.set :as set]))
+            [nukr.logic :as logic]))
 
 (defn create-user [user]
   (profile/create-user user))
@@ -11,6 +10,9 @@
 
 (defn get-user-by-id [id]
   (profile/get-user-by-id id))
+
+(defn get-user-by-email [email]
+  (profile/get-user-by-email email))
 
 (defn update-user [id user]
   (profile/update-user id user))
@@ -35,6 +37,5 @@
   (let [recommendations (logic/recommendations @profile/friendships user-id)
         users (map #(get-user-by-id %) recommendations)
         enabled-users-recommendations (logic/remove-user-recommendation-disabled users)]
-    (println enabled-users-recommendations)
     (logic/format-recommendations
      (get-user-by-id user-id) enabled-users-recommendations)))

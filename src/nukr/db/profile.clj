@@ -16,7 +16,7 @@
   (get @profiles id))
 
 (defn get-user-by-email [email]
-  (filter #(= (:email %) email) (vals @profiles)))
+  (some #(= (:email %) email) (vals @profiles)))
 
 (defn update-user [id user]
   (swap! profiles update id merge user))

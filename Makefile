@@ -30,4 +30,4 @@ build-image: ## Build a Docker image
 	@lein sudo docker build -t nukr .
 
 run-docker-image: ## Run your Docker image
-    docker run -p 8080:8080 nukr
+	docker run -p 8080:8080 nukr

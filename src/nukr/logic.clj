@@ -1,5 +1,4 @@
-(ns nukr.logic
-  (:require [clojure.set :as set]))
+(ns nukr.logic)
 
 (defn ^:private format-friendship [friend]
   {:id (:id friend) :name (:name friend) :can-recommendation (:enable_friends_recommendation friend)})

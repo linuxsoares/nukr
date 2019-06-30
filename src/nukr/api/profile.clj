@@ -6,7 +6,7 @@
              [helpers :refer [before defbefore defhandler handler]]]
             [schema.core :as s]
             [nukr.controller :as controller]
-            [nukr.http.schema :as schema]))
+            [nukr.api.schema :as schema]))
 
 (def all-users
   "Get all users from Nukr"
@@ -30,8 +30,11 @@
     :responses {201 {:body schema/UserResp}}}
    (fn [request]
      (let [user (:body-params request)]
-       {:status 201
-        :body (controller/create-user user)}))))
+       (if-let [exist-user (controller/get-user-by-email (:email user))]
+         {:status 409
+          :body {:message (str "User with email: " (:email user) " exists!")}}
+         {:status 201
+          :body (controller/create-user user)})))))
 
 (defbefore load-user
   {:summary    "Load a user by id"

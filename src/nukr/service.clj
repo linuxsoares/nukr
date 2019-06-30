@@ -6,8 +6,6 @@
              [core :as api]
              [helpers :refer [before defbefore defhandler handler]]]
             [schema.core :as s]
-            [nukr.controller :as controller]
-            [nukr.http.schema :as schema]
             [nukr.api.profile :as profile]
             [nukr.api.friendship :as friendship]
             [nukr.api.recommendation :as recommendation]))

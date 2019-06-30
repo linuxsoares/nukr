@@ -69,11 +69,20 @@
          (count response) 0))))
 
 (deftest test-api-create-user
-  (let [response (post-user payload)]
+  (let [response (post-user (assoc-in payload [:email] "joao-pedro@gmail.com"))]
     (is (=
          201 (:status response)))
     (is (=
          1 (get (json/read-str (:body response)) "id")))))
+
+(deftest test-api-create-user
+  (c/create-user (assoc-in payload [:email] "joao-pedro@gmail.com"))
+  (let [response (post-user (assoc-in payload [:email] "joao-pedro@gmail.com"))
+        expected {"message" "User with email: joao-pedro@gmail.com exists!"}]
+    (is (=
+         409 (:status response)))
+    (is (=
+         expected (json/read-str (:body response))))))
 
 (deftest test-api-get-user-by-id
   (post-user payload)
@@ -85,8 +94,9 @@
          "joao" (get (json/read-str (:body response)) "name")))))
 
 (deftest test-api-should-update-user-by-id
-  (post-user payload)
-  (put-user 1 payload :name "maria")
+  (c/create-user (assoc-in payload [:email] "joana@joana.com"))
+  (post-user (assoc-in payload [:email] "joana@joana.com"))
+  (put-user 1 (assoc-in payload [:email] "joana@joana.com") :name "maria")
   (let [name "maria"
         user-id 1
         response (get-user user-id)]
@@ -111,15 +121,28 @@
 
 (deftest test-api-should-add-friend
   (c/create-user payload)
-  (c/create-user (assoc-in payload [:name] "francisco"))
+  (c/create-user (assoc-in payload [:email] "francisco@francisco.com"))
   (let [user-id 1
         friend-id 2
         response (response-for service :post (str "/users/" user-id "/friendships")
                                :headers {"Content-Type" "application/json"}
                                :body (payload-friend friend-id))
-        expected {"user-id" 1, "name" "joao", "friends" [{"id" 2, "name" "francisco", "can-recommendation" true}]}]
+        expected {"user-id" 1, "name" "joao", "friends" [{"id" 2, "name" "joao", "can-recommendation" true}]}]
     (is (=
          expected (json/read-str (:body response))))))
+
+(deftest test-api-should-not-found-friend
+  (c/create-user payload)
+  (let [user-id 1
+        friend-id 10
+        response (response-for service :post (str "/users/" user-id "/friendships")
+                               :headers {"Content-Type" "application/json"}
+                               :body (payload-friend friend-id))
+        expected {"message" (str "User " friend-id " not found")}]
+    (is (=
+         expected (json/read-str (:body response))))
+    (is (=
+         404 (:status response)))))
 
 (deftest test-api-should-remove-friend
   (c/create-user payload)

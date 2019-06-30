@@ -1,9 +1,8 @@
 (ns nukr.api.friendship
   (:require [pedestal-api
-             [core :as api]
              [helpers :refer [before defbefore defhandler handler]]]
             [schema.core :as s]
-            [nukr.http.schema :as schema]
+            [nukr.api.schema :as schema]
             [nukr.controller :as controller]))
 
 (def friendships
@@ -29,8 +28,11 @@
    (fn [request]
      (let [user (:path-params request)
            friend (:body-params request)]
-       {:status 201
-        :body (controller/add-friend (:id user) (get-in friend [:friend :id]))}))))
+       (if-let [exist-user (controller/get-user-by-id (get-in friend [:friend :id]))]
+         {:status 201
+          :body (controller/add-friend (:id user) (get-in friend [:friend :id]))}
+         {:status 404
+          :body {:message (str "User " (get-in friend [:friend :id]) " not found")}})))))
 
 (def remove-friend
   "Remove friendship between users"

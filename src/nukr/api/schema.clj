@@ -1,4 +1,4 @@
-(ns nukr.http.schema
+(ns nukr.api.schema
   (:require [schema.core :as s]))
 
 (s/defschema User
