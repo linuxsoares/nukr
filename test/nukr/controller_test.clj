@@ -1,13 +1,14 @@
 (ns nukr.controller-test
   (:require [clojure.test :refer :all]
             [nukr.controller :as c]
-            [nukr.db.profile :as p]))
+            [nukr.db.profile :as p]
+            [nukr.db.friendship :as f]))
 
 (use-fixtures
   :each
   (fn [f]
     (reset! p/profiles {})
-    (reset! p/friendships {})
+    (reset! f/friendships {})
     (f)))
 
 (def ^:private user {:enable_friends_recommendation true,

@@ -1,6 +1,6 @@
 (ns nukr.api.recommendation
   (:require [pedestal-api
-             [helpers :refer [before defbefore defhandler handler]]]
+             [helpers :refer [handler]]]
             [nukr.controller :as controller]
             [schema.core :as s]
             [nukr.api.schema :as schema]))

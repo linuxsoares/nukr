@@ -1,5 +1,6 @@
 (ns nukr.controller
   (:require [nukr.db.profile :as profile]
+            [nukr.db.friendship :as friendship]
             [nukr.logic :as logic]))
 
 (defn create-user [user]
@@ -21,20 +22,20 @@
   (profile/delete-user id))
 
 (defn get-friendship-by-use-id [id]
-  (let [friends (profile/get-friendships-by-use-id id)]
+  (let [friends (friendship/get-friendships-by-use-id id)]
     (logic/format-friendships
      (get-user-by-id id) (map #(get-user-by-id %) (get friends id)))))
 
 (defn add-friend [user-id friend-id]
-  (let [friends (profile/add-friend user-id friend-id)]
+  (let [friends (friendship/add-friend user-id friend-id)]
     (logic/format-friendships
      (get-user-by-id user-id) (map #(get-user-by-id %) (get-in friends [user-id user-id])))))
 
 (defn remove-friend [user-id friend-id]
-  (profile/remove-friend user-id friend-id))
+  (friendship/remove-friend user-id friend-id))
 
 (defn recommendation-friends [user-id]
-  (let [recommendations (logic/recommendations @profile/friendships user-id)
+  (let [recommendations (logic/recommendations @friendship/friendships user-id)
         users (map #(get-user-by-id %) recommendations)
         enabled-users-recommendations (logic/remove-user-recommendation-disabled users)]
     (logic/format-recommendations

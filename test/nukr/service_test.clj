@@ -5,13 +5,14 @@
             [nukr.service :as service]
             [clojure.data.json :as json]
             [nukr.db.profile :as p]
+            [nukr.db.friendship :as f]
             [nukr.controller :as c]))
 
 (use-fixtures
   :each
   (fn [f]
     (reset! p/profiles {})
-    (reset! p/friendships {})
+    (reset! f/friendships {})
     (f)))
 
 (def service
@@ -103,7 +104,7 @@
     (is (=
          200 (:status response)))
     (is (=
-         "maria" (get (json/read-str (:body response)) "name")))))
+         name (get (json/read-str (:body response)) "name")))))
 
 (deftest test-api-should-delete-user
   (c/create-user payload)

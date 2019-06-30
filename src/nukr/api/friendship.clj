@@ -1,6 +1,6 @@
 (ns nukr.api.friendship
   (:require [pedestal-api
-             [helpers :refer [before defbefore defhandler handler]]]
+             [helpers :refer [handler]]]
             [schema.core :as s]
             [nukr.api.schema :as schema]
             [nukr.controller :as controller]))
