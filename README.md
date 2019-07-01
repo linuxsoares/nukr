@@ -89,3 +89,5 @@ Once the image it built, it's cached.  To delete the image and build a new one:
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUmVtb3ZlIEZyaWVuZHNoaXAgYnkgdXNlciBpZAoKYXBpLT5jb250cm9sbGVyOgAnCGYAGhUAHwotPmRiAA4fZGIAShB0dXJuAE8LcyB3aXRoIG91dACBCAggc2VsZWN0ZQBcDmFwaQAQLiAtIFN0YXR1cyAyMDQK&s=roundgreen)
 
 # Recommendation Friends Diagram
+
+![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRnJpZW5kcyBSZWNvbW1lbmRhdGlvbgoKYXBpLT5jb250cm9sbGVyOiBHZXQgZgAoBSByAB8NIGJ5IHVzZXItaWQKACcKLT5sb2dpYwARJwAnBQAmDQBWDnMgYWNjb3JkaW5nIHRvIHRoZQBuBSdzAIEMB3MAOggAgSYMUmV0dXJuABoIAIEnDwCBHg1hcGkAEB8gLSBTdGF0dXMgMjAwCg&s=roundgreen)
