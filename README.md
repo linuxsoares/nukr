@@ -63,7 +63,7 @@ Once the image it built, it's cached.  To delete the image and build a new one:
 ## Links
 * [Other examples](https://github.com/pedestal/samples)
 
-# User registration diagram
+# User Registration diagram
 
 ## Create User
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ3JlYXRlIFVzZXIgUHJvZmlsZQoKbm90ZSBvdmVyIGFwaSxjb250cm9sbGVyOiBSZXF1ZXN0IGMAMQZ1c2VyIHdpdGggYm9keSByABgGCmFwaS0-ACsMUE9TVCB0bwArDAoATQotPmRiOiBWZXJpZnkgaWYAUAZleGl0IGJ5IGVtYWlsCmFsdABnBm5vdCBleGlzdHMKICAgIGRiAFsOUmV0dXJucyBuaWwKZWxzAIEbBwAOIwCBDgVlbmQAURkAgSMMYXBpAGEKMjAxAIIIB2QAPwcAZBQAJhlFeGNlcHRpb24Agn4GAIFVB2VuZAoKCgoKCgABBQo&s=roundgreen)
@@ -77,7 +77,15 @@ Once the image it built, it's cached.  To delete the image and build a new one:
 # Get user by ID
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRGVsZXRlIHVzZXIKCmFwaS0-ZGI6IExvYWQgYWxsABIGYWx0IFVzZXIgbm90IGV4aXN0cwogICAgZGItPmFwaTogUmV0dXJuIDQwNAAeCmZvdW5kCmVsc2UANgYALQsAXglHZXQAdAYAOhRVABEIAIERBQAKECAtIFN0YXR1cyAyMDEKZW5kCg&s=roundgreen)
 
-## Diagram add friendships
+## Friendships Diagram
 
 # Add Friend
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgR2V0IGZyaWVuZHMgYnkgdXNlciBJRAoKYXBpLT5jb250cm9sbGVyOiBWZXJpZnkAJQcgZXhpc3QALQVpZAoAHQotPmRiAA4dYWx0IEYANwwKICAgIGRiAF4OUmV0dXJuAIEIBQAbBQBREEFkZACBLQhoaXAAJxwAFw8AgR4MYXBpAGEJAIENBnNoaXAgLSBTdGF0dXMgMjAxCmVsc2UAgSgIbm90AIERI25pbABNHQBWBzQwNABMDGZvdW5kCmVuZACCCgUK&s=roundgreen)
+
+# Get Friendships
+![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgR2V0IEZyaWVuZHNoaXAgYnkgdXNlciBpZAoKYXBpLT5jb250cm9sbGVyOgAnBWYAFxUAHAotPmRiAA4cZGIARg5SZXR1cm4ATAtzAEAYYXBpABoVLSBTdGF0dXMgMjAwCg&s=roundgreen)
+
+# Remove Friendship
+![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUmVtb3ZlIEZyaWVuZHNoaXAgYnkgdXNlciBpZAoKYXBpLT5jb250cm9sbGVyOgAnCGYAGhUAHwotPmRiAA4fZGIAShB0dXJuAE8LcyB3aXRoIG91dACBCAggc2VsZWN0ZQBcDmFwaQAQLiAtIFN0YXR1cyAyMDQK&s=roundgreen)
+
+# Recommendation Friends Diagram
