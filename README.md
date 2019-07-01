@@ -27,67 +27,69 @@ tests                Run tests
 uberjar              Build an uberjar of your service
 ```
 
+## Development Options
+`make install-dependencies`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Install all dependencies of project<br/>
+`make run`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Start the application | Go to [localhost:8080](http://localhost:8080/) to see: `Swagger Documentation`<br/>
+`make tests`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Run your app's tests<br/>
+`make lint`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Check format code of the all project (using cljfmt)<br/>
+`make fix-format-code`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Formats the code for the entire project<br/>
+`make run-repl`<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Run clojure repl<br/>
 
-## Getting Started
-
-1. Start the application: `lein run` or `make run`
-2. Go to [localhost:8080](http://localhost:8080/) to see: `Swagger Documentation`
-
-## Run Tests
-
-1. Run your app's tests with `lein test` or `make tests`.
-
-## Configuration
-
-To configure logging see config/logback.xml. By default, the app logs to stdout and logs/.
-To learn more about configuring Logback, read its [documentation](http://logback.qos.ch/documentation.html).
-
-
-## Developing your service
-
-### [Docker](https://www.docker.com/) container support
-
-1. Build an uberjar of your service: `lein uberjar`
-2. Build a Docker image: `sudo docker build -t nukr .`
-3. Run your Docker image: `docker run -p 8080:8080 nukr`
-
-### [OSv](http://osv.io/) unikernel support with [Capstan](http://osv.io/capstan/)
-
-1. Build and run your image: `capstan run -f "8080:8080"`
-
-Once the image it built, it's cached.  To delete the image and build a new one:
-
-1. `capstan rmi nukr; capstan build`
-
-
-## Links
-* [Other examples](https://github.com/pedestal/samples)
 
 # User Registration diagram
 
 ## Create User
+
+[SWAGGER DOCUMENTATION TO CREATE USER](http://localhost:8080/index.html#!/users/create_user)
+
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ3JlYXRlIFVzZXIgUHJvZmlsZQoKbm90ZSBvdmVyIGFwaSxjb250cm9sbGVyOiBSZXF1ZXN0IGMAMQZ1c2VyIHdpdGggYm9keSByABgGCmFwaS0-ACsMUE9TVCB0bwArDAoATQotPmRiOiBWZXJpZnkgaWYAUAZleGl0IGJ5IGVtYWlsCmFsdABnBm5vdCBleGlzdHMKICAgIGRiAFsOUmV0dXJucyBuaWwKZWxzAIEbBwAOIwCBDgVlbmQAURkAgSMMYXBpAGEKMjAxAIIIB2QAPwcAZBQAJhlFeGNlcHRpb24Agn4GAIFVB2VuZAoKCgoKCgABBQo&s=roundgreen)
 
 # Update User
+
+[SWAGGER DOCUMENTATION TO UPDATE USER](http://localhost:8080/index.html#!/users/update_user)
+
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgVXBkYXRlIHVzZXIKCmFwaS0-Y29udHJvbGxlcjogUFVUABYMIGJ5IElECgAYCi0-ZGI6ABUNYXQgREIKZGIAOg5SZXR1cm4APgZ1AG0FZAA5DQAZCVN0YXR1cyBjb2RlIDIwMCAtIFUAKAw&s=roundgreen)
 
 # Delete User
+
+[SWAGGER DOCUMENTATION TO DELETE USER](http://localhost:8080/index.html#!/users/delete_user)
+
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRGVsZXRlIHVzZXIKCmFwaS0-ZGI6IExvYWQgYWxsABIGYWx0IFVzZXIgbm90IGV4aXN0cwogICAgYXBpOiBSZXR1cm4gNDA0ABoKZm91bmQKZWxzZQAyBgAmDgBdBgBtDCAgICBkYi0ASwUAZAVyZW1vdmVkAFURMgBeCAAZCGVuZAo&s=roundgreen)
 
 # Get user by ID
+
+[SWAGGER DOCUMENTATION TO GET USER BY ID](http://localhost:8080/index.html#!/users/get_user)
+
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRGVsZXRlIHVzZXIKCmFwaS0-ZGI6IExvYWQgYWxsABIGYWx0IFVzZXIgbm90IGV4aXN0cwogICAgZGItPmFwaTogUmV0dXJuIDQwNAAeCmZvdW5kCmVsc2UANgYALQsAXglHZXQAdAYAOhRVABEIAIERBQAKECAtIFN0YXR1cyAyMDEKZW5kCg&s=roundgreen)
 
 ## Friendships Diagram
 
 # Add Friend
+
+[SWAGGER DOCUMENTATION TO ADD FRIEND](http://localhost:8080/index.html#!/users/add_friend)
+
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgR2V0IGZyaWVuZHMgYnkgdXNlciBJRAoKYXBpLT5jb250cm9sbGVyOiBWZXJpZnkAJQcgZXhpc3QALQVpZAoAHQotPmRiAA4dYWx0IEYANwwKICAgIGRiAF4OUmV0dXJuAIEIBQAbBQBREEFkZACBLQhoaXAAJxwAFw8AgR4MYXBpAGEJAIENBnNoaXAgLSBTdGF0dXMgMjAxCmVsc2UAgSgIbm90AIERI25pbABNHQBWBzQwNABMDGZvdW5kCmVuZACCCgUK&s=roundgreen)
 
 # Get Friendships
+
+[SWAGGER DOCUMENTATION TO GET ALL FRIENDS](http://localhost:8080/index.html#!/users/all_friends)
+
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgR2V0IEZyaWVuZHNoaXAgYnkgdXNlciBpZAoKYXBpLT5jb250cm9sbGVyOgAnBWYAFxUAHAotPmRiAA4cZGIARg5SZXR1cm4ATAtzAEAYYXBpABoVLSBTdGF0dXMgMjAwCg&s=roundgreen)
 
 # Remove Friendship
+
+[SWAGGER DOCUMENTATION TO REMOVE FRIEND](http://localhost:8080/index.html#!/users/remove_friend)
+
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUmVtb3ZlIEZyaWVuZHNoaXAgYnkgdXNlciBpZAoKYXBpLT5jb250cm9sbGVyOgAnCGYAGhUAHwotPmRiAA4fZGIAShB0dXJuAE8LcyB3aXRoIG91dACBCAggc2VsZWN0ZQBcDmFwaQAQLiAtIFN0YXR1cyAyMDQK&s=roundgreen)
 
 # Recommendation Friends Diagram
+
+[SWAGGER DOCUMENTATION TO GET RECOMMENDATION FRIENDSHIPS](http://localhost:8080/index.html#!/users/recommendations)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRnJpZW5kcyBSZWNvbW1lbmRhdGlvbgoKYXBpLT5jb250cm9sbGVyOiBHZXQgZgAoBSByAB8NIGJ5IHVzZXItaWQKACcKLT5sb2dpYwARJwAnBQAmDQBWDnMgYWNjb3JkaW5nIHRvIHRoZQBuBSdzAIEMB3MAOggAgSYMUmV0dXJuABoIAIEnDwCBHg1hcGkAEB8gLSBTdGF0dXMgMjAwCg&s=roundgreen)
