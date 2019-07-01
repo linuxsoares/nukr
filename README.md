@@ -1,6 +1,14 @@
 # nukr
 
-FIXME
+Social media connections
+
+You are tasked with making Nukr, a new social media product by Nu Everything S/A. The initial step is to create a prototype service that provides a REST API where we can simulate connections between people, and explore how we would offer new connection suggestions.
+
+These are the features required:
+- Be able to add a new profile;
+- Be able to tag two profiles as connected;
+- Be able to generate a list of new connection suggestions for a certain profile, taking the stance that the more connections a profile has with another profile's connections, the better ranked the suggestion should be;
+- Some profiles can, for privacy reasons, opt to be hidden from the connection suggestions.
 
 # Makefile
 ## All commands Makefile:
@@ -58,10 +66,16 @@ Once the image it built, it's cached.  To delete the image and build a new one:
 # User registration diagram
 
 ## Create User
-![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ3JlYXRlIFVzZXIgUHJvZmlsZQoKbm90ZSBvdmVyIGFwaSxjb250cm9sbGVyOiBSZXF1ZXN0IGMAMQZ1c2VyIHdpdGggYm9keSByABgGCmFwaS0-ACsMUE9TVCB0bwArDAoATQotPmRiOiBWZXJpZnkgaWYAUAZleGl0IGJ5IGVtYWlsCmRiAEMOUmV0dXJucwB7BmlmIGFscmVhAH0FZ2lzdGVyZWQgb3IgbmlsAFoNYXBpADEKMjAxAIFAB2QAgUIGb3IgRXhjZXB0aW9uAIILBmV4aXN0cwAxElN0YXR1ADwGLQCBBAcgb2JqZWN0AIIMBgBQBwoKCgoKCgoK&s=roundgreen)
+![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ3JlYXRlIFVzZXIgUHJvZmlsZQoKbm90ZSBvdmVyIGFwaSxjb250cm9sbGVyOiBSZXF1ZXN0IGMAMQZ1c2VyIHdpdGggYm9keSByABgGCmFwaS0-ACsMUE9TVCB0bwArDAoATQotPmRiOiBWZXJpZnkgaWYAUAZleGl0IGJ5IGVtYWlsCmFsdABnBm5vdCBleGlzdHMKICAgIGRiAFsOUmV0dXJucyBuaWwKZWxzAIEbBwAOIwCBDgVlbmQAURkAgSMMYXBpAGEKMjAxAIIIB2QAPwcAZBQAJhlFeGNlcHRpb24Agn4GAIFVB2VuZAoKCgoKCgABBQo&s=roundgreen)
 
 # Update User
-![]()
+![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgVXBkYXRlIHVzZXIKCmFwaS0-Y29udHJvbGxlcjogUFVUABYMIGJ5IElECgAYCi0-ZGI6ABUNYXQgREIKZGIAOg5SZXR1cm4APgZ1AG0FZAA5DQAZCVN0YXR1cyBjb2RlIDIwMCAtIFUAKAw&s=roundgreen)
+
+# Delete User
+![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRGVsZXRlIHVzZXIKCmFwaS0-ZGI6IExvYWQgYWxsABIGYWx0IFVzZXIgbm90IGV4aXN0cwogICAgYXBpOiBSZXR1cm4gNDA0ABoKZm91bmQKZWxzZQAyBgAmDgBdBgBtDCAgICBkYi0ASwUAZAVyZW1vdmVkAFURMgBeCAAZCGVuZAo&s=roundgreen)
+
+# Get user by ID
+![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRGVsZXRlIHVzZXIKCmFwaS0-ZGI6IExvYWQgYWxsABIGYWx0IFVzZXIgbm90IGV4aXN0cwogICAgZGItPmFwaTogUmV0dXJuIDQwNAAeCmZvdW5kCmVsc2UANgYALQsAXglHZXQAdAYAOhRVABEIAIERBQAKECAtIFN0YXR1cyAyMDEKZW5kCg&s=roundgreen)
 
 ## Diagram add friendships
-![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgTnVrciBDUlVEIEZyaWVuZHNoaXAKCm5vdGUgb3ZlciBVc2VyLE51a3I6IEFkZAAZDFVzZXItPgAVBkNyZWF0ZQA4CzogcGF0aC1wYXJhbTogOmlkIGFuZCBib2R5AA4GCk51a3ItPkFUT00AKxMgb24gQVRPTQpBVE9NAFwIUmV0dXJuIGYAgR4JcyBjAHIFZCBTdGF0dXMgQ29kZTogMjAxAFcHVXNlACQUAC8IAIFQF0dldCBhbGwAggULcyBmb3IgdXNlcgCBaA1HZXQAgQENAIFoCiA6aWQAgVUNABsQAEgILWlkAIFFHwCBLR5zAIFrEDAAgl8FOgCDMgUAgm4FAIE7CwCDQBdSZW1vdgCCcQ0AgVkVACAHAIFXGgCDRhwADDEAg2YTbmlsAINEFACDcQsgMjA0Cg&s=roundgreen)
+![]()
