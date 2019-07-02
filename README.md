@@ -10,6 +10,21 @@ These are the features required:
 - Be able to generate a list of new connection suggestions for a certain profile, taking the stance that the more connections a profile has with another profile's connections, the better ranked the suggestion should be;
 - Some profiles can, for privacy reasons, opt to be hidden from the connection suggestions.
 
+# Tasks
+## Tasks completed
+- [x] Create user;
+- [x] Update user;
+- [x] Delete user;
+- [x] Get user;
+- [x] Create friendship
+- [x] Get friendship
+- [x] Remove friendship
+- [x] Recommendation Friendships
+
+## Tasks to do
+- [ ] Sort recommendations by quantity of mutual friends
+- [ ] Improve self-generated payload tests
+
 # Makefile
 ## All commands Makefile:
 ```
