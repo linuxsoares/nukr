@@ -2,6 +2,24 @@
   (:require [clojure.test :refer :all]
             [nukr.logic :as logic]))
 
+(def payload '({:enable_friends_recommendation false
+                :address {:city "São Paulo"
+                          :country "Brasil"
+                          :region "Test"
+                          :state "SP"
+                          :street "Capote valente"
+                          :zipcode "03220300"}
+                :email "linux.soares@gmail.com"
+                :first_name "maria"
+                :name "maria"
+                :birthday "2019-01-01"
+                :short_name "maria"
+                :id 3
+                :last_name "soares"
+                :gender "masculino"
+                :languages ["portuguese"]
+                :about "bla bla bla"}))
+
 (deftest test-logic-build-friendships
   (let [friends [{:name "friend",
                   :id "11"
@@ -39,3 +57,8 @@
   (let [data {1 {1 '(2), :id 1}, 2 {2 '(1 3), :id 2}, 3 {3 '(1 2 4 5), :id 3}}
         friends-recommendation (logic/recommendations data 1)]
     (is (= #{3 4 5} friends-recommendation))))
+
+(deftest test-should-returns-empty-list-of-a-user-with-recommendation-disabled
+  (let [data (logic/remove-user-recommendation-disabled payload)]
+    (is (=
+         data '()))))

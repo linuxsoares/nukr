@@ -26,7 +26,7 @@ all-check: lint tests
 uberjar: ## Build an uberjar of your service
 	@lein uberjar
 
-heroku-deploy: uberjar
+heroku-deploy: uberjar ## Build an uberjar and deploy on heroku app
 	@heroku deploy:jar target/nukr.jar --app nukr-gilmar
 
 build-image: ## Build a Docker image

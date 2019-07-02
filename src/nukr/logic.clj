@@ -13,7 +13,7 @@
    :name (:name user)
    :recommendations (map format-friendship friends)})
 
-(defn can-recomendation-friend? [user]
+(defn ^:private can-recomendation-friend? [user]
   (get user :enable_friends_recommendation))
 
 (defn get-friends [data id]

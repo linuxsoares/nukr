@@ -28,18 +28,18 @@ uberjar              Build an uberjar of your service
 ```
 
 ## Development Options
-`make install-dependencies`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Install all dependencies of project<br/>
-`make run`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Start the application | Go to [localhost:8080](http://localhost:8080/) to see: `Swagger Documentation`<br/>
-`make tests`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Run your app's tests<br/>
-`make lint`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Check format code of the all project (using cljfmt)<br/>
-`make fix-format-code`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Formats the code for the entire project<br/>
-`make run-repl`<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;Run clojure repl<br/>
+* `make install-dependencies`<br/>
+    * Install all dependencies of project<br/>
+* `make run`<br/>
+    * Start the application | Go to [localhost:8080](http://localhost:8080/) to see: `Swagger Documentation`<br/>
+* `make tests`<br/>
+    * Run your app's tests<br/>
+* `make lint`<br/>
+    * Check format code of the all project (using cljfmt)<br/>
+* `make fix-format-code`<br/>
+    * Formats the code for the entire project<br/>
+* `make run-repl`<br/>
+    * Run clojure repl<br/>
 
 
 # User Registration diagram

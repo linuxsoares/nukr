@@ -186,3 +186,17 @@
          200 (:status response)))
     (is (=
          expected (json/read-str (:body response))))))
+
+(deftest test-should-not-return-friend-recommendation-with-flag-can-recommendation-false
+  (c/create-user payload)
+  (c/create-user (assoc-in payload [:name] "francisco"))
+  (c/create-user (assoc payload :name "maria" :enable_friends_recommendation false))
+  (c/add-friend 1 2)
+  (c/add-friend 2 3)
+  (let [user-id 1
+        response (response-for service :get (str "/users/" user-id "/recommendations"))
+        expected {"user-id" 1, "name" "joao", "recommendations" []}]
+    (is (=
+         200 (:status response)))
+    (is (=
+         expected (json/read-str (:body response))))))
