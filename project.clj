@@ -14,13 +14,14 @@
                  [io.pedestal/pedestal.jetty "0.5.5"]
                  ;; [io.pedestal/pedestal.immutant "0.5.5"]
                  ;; [io.pedestal/pedestal.tomcat "0.5.5"]
-
+                 
                  [ch.qos.logback/logback-classic "1.2.3" :exclusions [org.slf4j/slf4j-api]]
                  [org.slf4j/jul-to-slf4j "1.7.25"]
                  [org.slf4j/jcl-over-slf4j "1.7.25"]
                  [org.slf4j/log4j-over-slf4j "1.7.25"]
                  [org.clojure/data.json "0.2.6"]]
   :min-lein-version "2.0.0"
+  :uberjar-name "nukr.jar"
   :resource-paths ["config", "resources"]
   ;; If you use HTTP/2 or ALPN, use the java-agent to pull in the correct alpn-boot dependency
   ;:java-agents [[org.mortbay.jetty.alpn/jetty-alpn-agent "2.0.5"]]
@@ -28,5 +29,5 @@
                    :dependencies [[io.pedestal/pedestal.service-tools "0.5.5"]]}
              :uberjar {:aot [nukr.server]}}
   :plugins [[lein-cloverage "1.1.1"]
-  										[lein-cljfmt "0.6.4"]])
+            [lein-cljfmt "0.6.4"]])
 
