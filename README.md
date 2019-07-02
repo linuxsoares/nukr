@@ -46,25 +46,25 @@ uberjar              Build an uberjar of your service
 
 ## Create User
 
-[SWAGGER DOCUMENTATION TO CREATE USER](http://localhost:8080/index.html#!/users/create_user)
+[SWAGGER DOCUMENTATION TO CREATE USER](https://nukr-gilmar.herokuapp.com/index.html#!/users/create_user)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgQ3JlYXRlIFVzZXIgUHJvZmlsZQoKbm90ZSBvdmVyIGFwaSxjb250cm9sbGVyOiBSZXF1ZXN0IGMAMQZ1c2VyIHdpdGggYm9keSByABgGCmFwaS0-ACsMUE9TVCB0bwArDAoATQotPmRiOiBWZXJpZnkgaWYAUAZleGl0IGJ5IGVtYWlsCmFsdABnBm5vdCBleGlzdHMKICAgIGRiAFsOUmV0dXJucyBuaWwKZWxzAIEbBwAOIwCBDgVlbmQAURkAgSMMYXBpAGEKMjAxAIIIB2QAPwcAZBQAJhlFeGNlcHRpb24Agn4GAIFVB2VuZAoKCgoKCgABBQo&s=roundgreen)
 
 # Update User
 
-[SWAGGER DOCUMENTATION TO UPDATE USER](http://localhost:8080/index.html#!/users/update_user)
+[SWAGGER DOCUMENTATION TO UPDATE USER](https://nukr-gilmar.herokuapp.com/index.html#!/users/update_user)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgVXBkYXRlIHVzZXIKCmFwaS0-Y29udHJvbGxlcjogUFVUABYMIGJ5IElECgAYCi0-ZGI6ABUNYXQgREIKZGIAOg5SZXR1cm4APgZ1AG0FZAA5DQAZCVN0YXR1cyBjb2RlIDIwMCAtIFUAKAw&s=roundgreen)
 
 # Delete User
 
-[SWAGGER DOCUMENTATION TO DELETE USER](http://localhost:8080/index.html#!/users/delete_user)
+[SWAGGER DOCUMENTATION TO DELETE USER](https://nukr-gilmar.herokuapp.com/index.html#!/users/delete_user)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRGVsZXRlIHVzZXIKCmFwaS0-ZGI6IExvYWQgYWxsABIGYWx0IFVzZXIgbm90IGV4aXN0cwogICAgYXBpOiBSZXR1cm4gNDA0ABoKZm91bmQKZWxzZQAyBgAmDgBdBgBtDCAgICBkYi0ASwUAZAVyZW1vdmVkAFURMgBeCAAZCGVuZAo&s=roundgreen)
 
 # Get user by ID
 
-[SWAGGER DOCUMENTATION TO GET USER BY ID](http://localhost:8080/index.html#!/users/get_user)
+[SWAGGER DOCUMENTATION TO GET USER BY ID](https://nukr-gilmar.herokuapp.com/index.html#!/users/get_user)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRGVsZXRlIHVzZXIKCmFwaS0-ZGI6IExvYWQgYWxsABIGYWx0IFVzZXIgbm90IGV4aXN0cwogICAgZGItPmFwaTogUmV0dXJuIDQwNAAeCmZvdW5kCmVsc2UANgYALQsAXglHZXQAdAYAOhRVABEIAIERBQAKECAtIFN0YXR1cyAyMDEKZW5kCg&s=roundgreen)
 
@@ -72,24 +72,24 @@ uberjar              Build an uberjar of your service
 
 # Add Friend
 
-[SWAGGER DOCUMENTATION TO ADD FRIEND](http://localhost:8080/index.html#!/users/add_friend)
+[SWAGGER DOCUMENTATION TO ADD FRIEND](https://nukr-gilmar.herokuapp.com/index.html#!/users/add_friend)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgR2V0IGZyaWVuZHMgYnkgdXNlciBJRAoKYXBpLT5jb250cm9sbGVyOiBWZXJpZnkAJQcgZXhpc3QALQVpZAoAHQotPmRiAA4dYWx0IEYANwwKICAgIGRiAF4OUmV0dXJuAIEIBQAbBQBREEFkZACBLQhoaXAAJxwAFw8AgR4MYXBpAGEJAIENBnNoaXAgLSBTdGF0dXMgMjAxCmVsc2UAgSgIbm90AIERI25pbABNHQBWBzQwNABMDGZvdW5kCmVuZACCCgUK&s=roundgreen)
 
 # Get Friendships
 
-[SWAGGER DOCUMENTATION TO GET ALL FRIENDS](http://localhost:8080/index.html#!/users/all_friends)
+[SWAGGER DOCUMENTATION TO GET ALL FRIENDS](https://nukr-gilmar.herokuapp.com/index.html#!/users/all_friends)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgR2V0IEZyaWVuZHNoaXAgYnkgdXNlciBpZAoKYXBpLT5jb250cm9sbGVyOgAnBWYAFxUAHAotPmRiAA4cZGIARg5SZXR1cm4ATAtzAEAYYXBpABoVLSBTdGF0dXMgMjAwCg&s=roundgreen)
 
 # Remove Friendship
 
-[SWAGGER DOCUMENTATION TO REMOVE FRIEND](http://localhost:8080/index.html#!/users/remove_friend)
+[SWAGGER DOCUMENTATION TO REMOVE FRIEND](https://nukr-gilmar.herokuapp.com/index.html#!/users/remove_friend)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgUmVtb3ZlIEZyaWVuZHNoaXAgYnkgdXNlciBpZAoKYXBpLT5jb250cm9sbGVyOgAnCGYAGhUAHwotPmRiAA4fZGIAShB0dXJuAE8LcyB3aXRoIG91dACBCAggc2VsZWN0ZQBcDmFwaQAQLiAtIFN0YXR1cyAyMDQK&s=roundgreen)
 
 # Recommendation Friends Diagram
 
-[SWAGGER DOCUMENTATION TO GET RECOMMENDATION FRIENDSHIPS](http://localhost:8080/index.html#!/users/recommendations)
+[SWAGGER DOCUMENTATION TO GET RECOMMENDATION FRIENDSHIPS](https://nukr-gilmar.herokuapp.com/index.html#!/users/recommendations)
 
 ![](https://www.websequencediagrams.com/cgi-bin/cdraw?lz=dGl0bGUgRnJpZW5kcyBSZWNvbW1lbmRhdGlvbgoKYXBpLT5jb250cm9sbGVyOiBHZXQgZgAoBSByAB8NIGJ5IHVzZXItaWQKACcKLT5sb2dpYwARJwAnBQAmDQBWDnMgYWNjb3JkaW5nIHRvIHRoZQBuBSdzAIEMB3MAOggAgSYMUmV0dXJuABoIAIEnDwCBHg1hcGkAEB8gLSBTdGF0dXMgMjAwCg&s=roundgreen)
