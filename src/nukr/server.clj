@@ -10,6 +10,7 @@
                   (constantly (bootstrap/create-server
                                (-> service/service
                                    (assoc ::bootstrap/port (Integer. (or (System/getenv "PORT") "5000")))
+                                   (assoc ::bootstrap/host (or (System/getenv "HOST") "localhost"))
                                    (bootstrap/default-interceptors))))))
 
 (defn start []
