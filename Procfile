@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/nukr.jar clojure.main -m nukr.server
+web: java $JVM_OPTS -jar target/nukr.jar
