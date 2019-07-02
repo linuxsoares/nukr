@@ -29,5 +29,5 @@
              :uberjar {:aot [nukr.server]}}
   :plugins [[lein-cloverage "1.1.1"]
             [lein-cljfmt "0.6.4"]]
-  :main ^{:skip-aot true} nukr.server)
+  :main nukr.server)
 

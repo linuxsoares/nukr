@@ -1,6 +1,7 @@
 (ns nukr.server
   (:require [nukr.service :as service]
-            [io.pedestal.http :as bootstrap]))
+            [io.pedestal.http :as bootstrap])
+  (:gen-class))
 
 (defonce service-instance nil)
 
