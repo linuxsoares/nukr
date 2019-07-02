@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/nukr-0.0.1-SNAPSHOT-standalone.jar clojure.main -m nukr.server
+web: java $JVM_OPTS -cp target/nukr-0.0.1-SNAPSHOT-standalone.jar -m nukr.server
